@@ -384,6 +384,10 @@ h1 {
   margin-left: 20px;
 }
 
+.burger-line {
+  width: 204px;
+  border-top: 1px dashed #000000;
+}
 
 
 .menu {
@@ -607,6 +611,10 @@ button {
   display: none;
 }
 
+.history-images_mini {
+  display: none;
+}
+
 
 
 @media (max-width: 1500px) {
@@ -692,7 +700,6 @@ button {
     margin-bottom: 30px;
   }
 
-
   .block-holder {
     display: block;
   }
@@ -716,6 +723,19 @@ button {
   .history-number {
     width: auto;
   }
+
+  .history-images_mini {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 45px;
+  }
+
+  .history-holder {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 
@@ -735,10 +755,6 @@ button {
 
   .header-line {
     justify-content: space-between;
-  }
-
-  .burgers-image {
-    display: none;
   }
 
 }
@@ -767,9 +783,9 @@ button {
 
 @media (max-width: 780px) {
   .header-down {
-    width: 276px;
     display: flex;
     justify-content: center;
+    width: auto;
   }
 
   .header-title {
@@ -797,10 +813,6 @@ button {
     margin-bottom: 30px;
   }
 
-  .history-holder {
-    display: block;
-  }
-
   .menu-item {
     width: auto;
   }
@@ -816,7 +828,7 @@ button {
   .history-number {
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 182px;
+    margin-bottom: 45px;
   }
 
   .number-item span {
@@ -832,6 +844,45 @@ button {
     margin-bottom: 60px;
   }
 
+  .burgers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .burgers-image {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pizza {
+    width: auto;
+  }
+
+  .burgers-items {
+    margin-bottom: 126px;
+  }
+
+  .burger-line {
+    display: none;
+  }
+
+  .cost {
+    white-space: pre-wrap;
+    margin-top: 29px;
+  }
+
+  .history-images_mini {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .cook-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
 }
