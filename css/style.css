@@ -17,10 +17,22 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  margin: 0;
+}
 
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
 
 .container {
-  margin: 0px 166px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1148px;
 }
 
 .header {
@@ -189,10 +201,13 @@ h1 {
 .card {
   width: 349px;
   box-shadow: 10px 10px 40px 20px #0000001A;
-  margin-right: 31px;
   background-color: #fff;
   margin-top: -80px;
   padding: 10px 10px;
+}
+
+.card:not(:last-child) {
+  margin-right: 31px;
 }
 
 .card-image {
@@ -223,9 +238,6 @@ h1 {
   font-weight: 400;
   color: #656363;
 }
-
-
-
 
 .history {
   margin-top: 166px;
@@ -265,6 +277,7 @@ h1 {
   text-align: center;
   font-size: 40px;
   color: #BC9060;
+  list-style: none;
 }
 
 .number-item span {
@@ -366,6 +379,7 @@ h1 {
 .burgers {
   display: flex;
   justify-content: center;
+  margin-bottom: 150px;
 }
 
 .burger-item {
@@ -387,6 +401,15 @@ h1 {
 .burger-line {
   width: 204px;
   border-top: 1px dashed #000000;
+  margin: 10px;
+}
+
+.cost {
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
 }
 
 
@@ -398,12 +421,16 @@ h1 {
 }
 
 .menu-title {
-  font-family: 'Tinos', serif;
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 400;
   font-size: 54px;
+  line-height: 62px;
+  color: #FFFFFF;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
   padding-top: 98px;
-  color: #fff;
-  text-align: center;
   padding-bottom: 138px;
+  text-align: center;
 }
 
 .menu-item {
@@ -412,19 +439,27 @@ h1 {
   width: 350px;
   padding-top: 80px;
   padding-bottom: 30px;
-
   margin-right: 20px;
 }
 
 .menu-text {
-  font-family: 'Tinos', serif;
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 400;
   font-size: 26px;
+  line-height: 30px;
+  color: #000000;
   padding-top: 16px;
   padding-bottom: 17px;
 }
 
 .menu-subtext {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
+  line-height: 22px;
+  text-align: center;
   padding-bottom: 20px;
 }
 
@@ -464,7 +499,6 @@ h1 {
   display: flex;
   justify-content: center;
 }
-
 
 
 
@@ -676,12 +710,12 @@ button {
 
   .menu-item {
     margin: 20px auto;
-    width: 600px;
+    width: 450px;
   }
 
 
   .header-title {
-    position: static;
+    margin-left: 100px;
   }
 
   .header-suptitle:before,
@@ -741,25 +775,44 @@ button {
 
 
 @media (max-width: 1185px) {
-
-  .burger-menu {
-    display: block;
+  .nav-item {
+    font-size: 12px;
   }
 
-  .nav,
-  .cart,
-  .phone,
-  .btn {
-    display: none;
+  .num {
+    font-size: 14px;
   }
 
-  .header-line {
-    justify-content: space-between;
+  .phone-svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 945px;
+    width: 100%;
+    margin: 0 auto;
   }
 
 }
 
+@media (max-width:1024px) {
+  .container {
+    max-width: 824px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
+  .card {
+    padding: 3px 3px;
+  }
+
+}
 
 @media (max-width: 1000px) {
 
@@ -782,10 +835,43 @@ button {
 
 
 @media (max-width: 780px) {
+
+  .header {
+    background-image: url(/img/bg-iPhone.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 360px;
+    width: 100%;
+  }
+
+  .left-title {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+  }
+
   .header-down {
-    display: flex;
-    justify-content: center;
     width: auto;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .nav,
+  .cart,
+  .phone,
+  .btn {
+    display: none;
+  }
+
+  .header-line {
+    justify-content: space-between;
   }
 
   .header-title {
@@ -794,6 +880,9 @@ button {
     font-weight: 400;
     font-size: 30px;
     line-height: 34px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 62px;
   }
 
   .header-subtitle {
@@ -821,14 +910,12 @@ button {
     display: none;
   }
 
-  .container {
-    margin: auto 40px;
-  }
-
   .history-number {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 45px;
+    margin-left: auto;
+    padding: 0
   }
 
   .number-item span {
@@ -860,17 +947,13 @@ button {
     width: auto;
   }
 
-  .burgers-items {
-    margin-bottom: 126px;
-  }
-
   .burger-line {
     display: none;
   }
 
   .cost {
-    white-space: pre-wrap;
-    margin-top: 29px;
+    white-space: nowrap;
+    margin-left: 7px;
   }
 
   .history-images_mini {
@@ -883,7 +966,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
   }
 
 }
-
